@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Ntent</authors>
+    <licenseUrl>https://github.com/ntent-ad/user-agent-utils/blob/trunk/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/ntent-ad/user-agent-utils</projectUrl>
+    <iconUrl>http://www.bitwalker.eu/wp-content/uploads/2014/10/user-agent-utils.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <copyright>Copyright 2015</copyright>
+    <tags>user-agent</tags>
+  </metadata>
+</package>
