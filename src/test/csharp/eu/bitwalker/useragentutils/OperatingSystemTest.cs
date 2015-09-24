@@ -571,7 +571,7 @@ namespace eu.bitwalker.useragentutils
                 operatingSystem = OperatingSystem.valueOf((short) 0);
                 Assert.Fail("Should have thrown IllegalArgumentException");
             }
-            catch (ArgumentException e)
+            catch (ArgumentException)
             {
                 // good
             }
@@ -591,7 +591,7 @@ namespace eu.bitwalker.useragentutils
                 operatingSystem = OperatingSystem.valueOf("illegal");
                 Assert.Fail("Should have thrown IllegalArgumentException");
             }
-            catch (ArgumentException e)
+            catch (ArgumentException)
             {
                 // good
             }

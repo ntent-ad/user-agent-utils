@@ -156,7 +156,7 @@ namespace eu.bitwalker.useragentutils
 	     * Combined string representation of both enums
 	     */
 
-        public string ToString()
+        public override string ToString()
         {
             return this.operatingSystem.ToString() + "-" + this.browser.ToString();
         }
