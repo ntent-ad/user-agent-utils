@@ -71,6 +71,11 @@ namespace eu.bitwalker.useragentutils
             return _values.AsReadOnly();
         }
         #endregion .NET specific initialization
+
+        /**
+         * EdgeHTML is a proprietary layout engine developed for the Microsoft Edge web browser, developed by Microsoft.
+         */
+        public static readonly RenderingEngine EDGE_HTML = new RenderingEngine("EdgeHTML");
 	
 	    /**
 	     * Trident is the the Microsoft layout engine, mainly used by Internet Explorer.

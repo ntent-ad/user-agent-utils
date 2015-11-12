@@ -29,15 +29,15 @@ namespace eu.bitwalker.useragentutils.browser
             Version browserVersion = userAgent.getBrowserVersion();
             if (null != browserVersion)
             {
-                Assert.AreEqual(expectedBrowserVersion, browserVersion.ToString());
+                Assert.AreEqual(expectedBrowserVersion, browserVersion.ToString(), userAgentValue);
             }
             else
             {
-                Assert.AreEqual(expectedBrowserVersion, browserVersion);
+                Assert.AreEqual(expectedBrowserVersion, browserVersion, userAgentValue);
             }
 
             OperatingSystem os = userAgent.getOperatingSystem();
-            Assert.AreEqual(expectedOS, os);
+            Assert.AreEqual(expectedOS, os, userAgentValue);
         }
 
     }

@@ -4,7 +4,10 @@ using NUnit.Framework;
 namespace  eu.bitwalker.useragentutils.browser {
 
 
-public class SafariParameterizedTest : AbstractUserAgentParameterizedTest {
+public class SafariParameterizedTest : AbstractUserAgentParameterizedTest { 
+                [TestCase(
+        		        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/601.1.56 (KHTML, like Gecko) Version/9.0 Safari/601.1.56",
+					    "SAFARI9", "9.0", "MAC_OS_X")]
 				// safari
 				[TestCase(
 						"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/525.28.3 (KHTML, like Gecko) Version/3.2.3 Safari/525.28.3",

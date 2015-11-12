@@ -92,6 +92,18 @@ namespace eu.bitwalker.useragentutils
             "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; ASU2JS; rv:11.0) like Gecko", //64bit Win8
         };
 
+        private String[] edgeClients = new String[] 
+        {
+            "Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36 Edge/12.0",
+            "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10532"
+        };
+
+        private String[] edgeMobileClients = new String[] 
+        {
+            "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.0"
+        };
+
         private String[] ie55clients = new String[]
         {
             "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0; .NET CLR 1.1.4322)",
@@ -412,6 +424,8 @@ namespace eu.bitwalker.useragentutils
         private String[] opera =
         {
             "Opera/8.0 (Macintosh; PPC Mac OS X; U; en)",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36 OPR/66.0.1889.174",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36 OPR/43.0.1948.25"
         };
 
         private String[] opera9 =
@@ -489,6 +503,12 @@ namespace eu.bitwalker.useragentutils
         private String[] opera27 =
         {
             "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36 OPR/27.0.1689.76"
+        };
+
+        private string[] opera31 = {
+            "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36 OPR/31.0.1889.174",
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36 OPR/31.0.1889.174",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36 OPR/31.0.1889.174"
         };
 
         private String[] operaMini =
@@ -638,93 +658,42 @@ namespace eu.bitwalker.useragentutils
         [Test]
         public void testVersionDetection()
         {
-            testVersions("Lynx/2.8.5rel.1 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.7d",
-                new Version("2.8.5rel.1", "2", "8"));
-            testVersions("Mozilla/6.0 (compatible; Konqueror/4.2; i686 FreeBSD 6.4; 20060308)",
-                new Version("4.2", "4", "2"));
-            testVersions("Mozilla/5.0 (compatible; Konqueror/3.1-rc5; i686 Linux; 20021219)",
-                new Version("3.1-rc5", "3", "1"));
-            testVersions(
-                "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.14) Gecko/2009090216 Ubuntu/9.04 (jaunty) Firefox/3.0.14",
-                new Version("3.0.14", "3", "0"));
-            testVersions(
-                "Mozilla/4.0 (compatible; MSIE 7.0b; Windows NT 6.0 ; .NET CLR 2.0.50215; SL Commerce Client v1.0; Tablet PC 2.0",
-                new Version("7.0b", "7", "0b")); // is minor here b or 0b?
-            testVersions("Opera/9.80 (Windows NT 5.2; U; en) Presto/2.2.15 Version/10.10",
-                new Version("10.10", "10", "10"));
+            testVersions("Lynx/2.8.5rel.1 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.7d", new Version("2.8.5rel.1", "2", "8"));
+            testVersions("Mozilla/6.0 (compatible; Konqueror/4.2; i686 FreeBSD 6.4; 20060308)", new Version("4.2", "4", "2"));
+            testVersions("Mozilla/5.0 (compatible; Konqueror/3.1-rc5; i686 Linux; 20021219)", new Version("3.1-rc5", "3", "1"));
+            testVersions("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.14) Gecko/2009090216 Ubuntu/9.04 (jaunty) Firefox/3.0.14",new Version("3.0.14", "3", "0"));
+            testVersions("Mozilla/4.0 (compatible; MSIE 7.0b; Windows NT 6.0 ; .NET CLR 2.0.50215; SL Commerce Client v1.0; Tablet PC 2.0",new Version("7.0b", "7", "0b")); // is minor here b or 0b?
+            testVersions("Opera/9.80 (Windows NT 5.2; U; en) Presto/2.2.15 Version/10.10",new Version("10.10", "10", "10"));
             testVersions("Opera/8.0 (Macintosh; PPC Mac OS X; U; en)", new Version("8.0", "8", "0"));
-            testVersions(
-                "Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.558.0 Safari/534.10",
-                new Version("8.0.558.0", "8", "0"));
-            testVersions(
-                "Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/540.0 (KHTML,like Gecko) Chrome/9.1.0.0 Safari/540.0",
-                new Version("9.1.0.0", "9", "1"));
-            testVersions(
-                "Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-gb) AppleWebKit/523.10.6 (KHTML, like Gecko) Version/3.0.4 Safari/523.10.6",
-                new Version("3.0.4", "3", "0"));
-            testVersions(
-                "Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
-                new Version("4.0", "4", "0"));
-            testVersions(
-                "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; Trident/4.0; GTB6.4; Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1) ; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 1.1.4322; .NET CLR 3.5.30729; .NET CLR 3.0.30729; OfficeLiveConnector.1.3; OfficeLivePatch.0.0; MSOffice 14)",
-                new Version("14", "14", "0"));
-            testVersions(
-                "Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; it; rv:1.8.1.21) Gecko/20090327 Camino/1.6.7 (MultiLang) (like Firefox/2.0.0.21pre)",
-                new Version("1.6.7", "1", "6"));
-            testVersions(
-                "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.3) Gecko/2008100716 Firefox/3.0.3 Flock/2.0",
-                new Version("2.0", "2", "0"));
-            testVersions(
-                "Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1.17) Gecko/20080914 Thunderbird/2.0.0.17",
-                new Version("2.0.0.17", "2", "0"));
+            testVersions("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36 OPR/32.0.1948.25", new Version("32.0.1948.25", "32", "0"));
+            testVersions("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36 OPR/66.3.1889.174", new Version("66.3.1889.174", "66", "3"));
+            testVersions("Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.558.0 Safari/534.10",new Version("8.0.558.0", "8", "0"));
+            testVersions("Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/540.0 (KHTML,like Gecko) Chrome/9.1.0.0 Safari/540.0",new Version("9.1.0.0", "9", "1"));
+            testVersions("Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-gb) AppleWebKit/523.10.6 (KHTML, like Gecko) Version/3.0.4 Safari/523.10.6",new Version("3.0.4", "3", "0"));
+            testVersions("Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",new Version("4.0", "4", "0"));
+            testVersions("Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; Trident/4.0; GTB6.4; Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1) ; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 1.1.4322; .NET CLR 3.5.30729; .NET CLR 3.0.30729; OfficeLiveConnector.1.3; OfficeLivePatch.0.0; MSOffice 14)",new Version("14", "14", "0"));
+            testVersions("Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; it; rv:1.8.1.21) Gecko/20090327 Camino/1.6.7 (MultiLang) (like Firefox/2.0.0.21pre)",new Version("1.6.7", "1", "6"));
+            testVersions("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.3) Gecko/2008100716 Firefox/3.0.3 Flock/2.0",new Version("2.0", "2", "0"));
+            testVersions("Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1.17) Gecko/20080914 Thunderbird/2.0.0.17",new Version("2.0.0.17", "2", "0"));
             testVersions("Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)", new Version("5.0", "5", "0"));
-            testVersions(
-                "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.1.13) Gecko/20100914 Mnenhy/0.8.3 SeaMonkey/2.0.8",
-                new Version("2.0.8", "2", "0"));
-            testVersions(
-                "Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaE90-1/07.24.0.3; Profile/MIDP-2.0 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413 UP.Link/6.2.3.18.0",
-                null);
-            testVersions("Mozilla/5.0 (compatible; Googlebot/2.1; http://www.google.com/bot.html)", null);
-                // no version information for some browsers
-            testVersions(
-                "Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7",
-                new Version("16.0.912.75", "16", "0"));
-            testVersions(
-                "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-80) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true",
-                new Version("1.1.0-80", "1", "1"));
-            testVersions(
-                "Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3",
-                new Version("19.0.1084.60", "19", "0"));
-            testVersions(
-                "Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7",
-                new Version("16.0.912.75", "16", "0"));
-            testVersions(
-                "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36 OPR/15.0.1147.100",
-                new Version("15.0.1147.100", "15", "0"));
-            testVersions(
-                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36 OPR/16.0.1196.73",
-                new Version("16.0.1196.73", "16", "0"));
-            testVersions(
-                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36",
-                new Version("29.0.1547.65", "29", "0"));
-            testVersions("Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko",
-                new Version("11.0", "11", "0"));
-            testVersions(
-                "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C)",
-                new Version("7.0", "7", "0")); // issue #31
-            testVersions(
-                "Mozilla/5.0 (Linux; Android 4.1.2; LT22i Build/6.2.A.1.100) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36",
-                new Version("31.0.1650.59", "31", "0"));
+            testVersions("Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.1.13) Gecko/20100914 Mnenhy/0.8.3 SeaMonkey/2.0.8",new Version("2.0.8", "2", "0"));
+            testVersions("Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaE90-1/07.24.0.3; Profile/MIDP-2.0 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413 UP.Link/6.2.3.18.0",null);
+            testVersions("Mozilla/5.0 (compatible; Googlebot/2.1; http://www.google.com/bot.html)", null); // no version information for some browsers
+            testVersions("Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7",new Version("16.0.912.75", "16", "0"));
+            testVersions("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-80) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true",new Version("1.1.0-80", "1", "1"));
+            testVersions("Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3",new Version("19.0.1084.60", "19", "0"));
+            testVersions("Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7",new Version("16.0.912.75", "16", "0"));
+            testVersions("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36 OPR/15.0.1147.100",new Version("15.0.1147.100", "15", "0"));
+            testVersions("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36 OPR/16.0.1196.73",new Version("16.0.1196.73", "16", "0"));
+            testVersions("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36",new Version("29.0.1547.65", "29", "0"));
+            testVersions("Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko",new Version("11.0", "11", "0"));
+            testVersions("Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240", new Version("12.10240", "12", "10240"));
+            testVersions("Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C)",new Version("7.0", "7", "0")); // issue #31
+            testVersions("Mozilla/5.0 (Linux; Android 4.1.2; LT22i Build/6.2.A.1.100) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36",new Version("31.0.1650.59", "31", "0"));
             testVersions("Windows-RSS-Platform/2.0 (IE 11.0; Windows NT 6.1)", new Version("11.0", "11", "0"));
-            testVersions(
-                "Mozilla/5.0 (iPad; CPU OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Coast/1.1.3.65998 Mobile/11B511 Safari/7534.48.3",
-                new Version("1.1.3.65998", "1", "1"));
-            testVersions(
-                "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36 OPR/23.0.1522.60",
-                new Version("23.0.1522.60", "23", "0"));
-            testVersions(
-                "Mozilla/5.0 (Linux; Android 4.1.2; HTC One SV Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.81 Mobile Safari/537.36 OPR/28.0.1764.90386",
-                new Version("28.0.1764.90386", "28", "0"));
+            testVersions("Mozilla/5.0 (iPad; CPU OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Coast/1.1.3.65998 Mobile/11B511 Safari/7534.48.3",new Version("1.1.3.65998", "1", "1"));
+            testVersions("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36 OPR/23.0.1522.60",new Version("23.0.1522.60", "23", "0"));
+            testVersions("Mozilla/5.0 (Linux; Android 4.1.2; HTC One SV Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.81 Mobile Safari/537.36 OPR/28.0.1764.90386",new Version("28.0.1764.90386", "28", "0"));
 
         }
 
@@ -748,6 +717,8 @@ namespace eu.bitwalker.useragentutils
             testAgents(ie9clients, Browser.IE9);
             testAgents(ie10clients, Browser.IE10);
             testAgents(ie11clients, Browser.IE11);
+            testAgents(edgeClients, Browser.EDGE12);
+            testAgents(edgeMobileClients, Browser.EDGE_MOBILE12);
             testAgents(ieTooOld, Browser.IE);
             testAgents(outlook2007, Browser.OUTLOOK2007);
             testAgents(outlook2010, Browser.OUTLOOK2010);
@@ -815,6 +786,7 @@ namespace eu.bitwalker.useragentutils
             testAgents(opera23, Browser.OPERA23);
             testAgents(opera24, Browser.OPERA24);
             testAgents(opera27, Browser.OPERA27);
+            testAgents(opera31, Browser.OPERA31);
             testAgents(operaCoast, Browser.COAST1);
             testAgents(camino2, Browser.CAMINO2);
             testAgents(camino, Browser.CAMINO);

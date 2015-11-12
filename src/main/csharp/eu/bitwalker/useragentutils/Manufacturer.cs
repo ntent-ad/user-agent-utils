@@ -161,9 +161,13 @@ namespace eu.bitwalker.useragentutils
 	     * Adobe Systems Inc.
 	     */
 	    public static readonly Manufacturer ADOBE = new Manufacturer(23, "Adobe Systems Inc.");
-	
-	
-	    private readonly short id;
+        /**
+         * Canonical Ltd.
+         */
+        public static readonly Manufacturer CONONICAL = new Manufacturer(25, "Canonical Ltd.");
+
+
+        private readonly short id;
 	    private readonly string name;
 	
 	    private Manufacturer(int id, string name) {

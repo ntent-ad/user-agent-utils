@@ -9,7 +9,7 @@ public class KonquerorParameterizedTest :
 				// konqueror
 				[TestCase(
 						"Mozilla/5.0 (compatible; konqueror/3.3; linux 2.4.21-243-smp4G) (KHTML, like Geko)",
-						"KONQUEROR", null, "LINUX" )]
+						"KONQUEROR", "3.3", "LINUX" )]
 				[TestCase(
 						"Mozilla/6.0 (compatible; Konqueror/4.2; i686 FreeBSD 6.4; 20060308)",
 						"KONQUEROR", "4.2", "UNKNOWN" )]

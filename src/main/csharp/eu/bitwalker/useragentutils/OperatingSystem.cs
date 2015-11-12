@@ -79,11 +79,12 @@ namespace eu.bitwalker.useragentutils
 	    public static readonly OperatingSystem WINDOWS = new OperatingSystem(		Manufacturer.MICROSOFT,null,1, "Windows", new string[] { "Windows" }, new string[] { "Palm", "ggpht.com"  }, DeviceType.COMPUTER, null ); // catch the rest of older Windows systems (95, NT,...)
 		    public static readonly OperatingSystem WINDOWS_10 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,24, "Windows 10", new string[] { "Windows NT 6.4", "Windows NT 10" }, null, DeviceType.COMPUTER, null ); // before Win, yes, Windows 10 is called 6.4 LOL
 		    public static readonly OperatingSystem WINDOWS_81 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,23, "Windows 8.1", new string[] { "Windows NT 6.3" }, null, DeviceType.COMPUTER, null ); // before Win, yes, Windows 8.1 is called 6.3 LOL
-		    public static readonly OperatingSystem WINDOWS_8 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,22, "Windows 8", new string[] { "Windows NT 6.2" }, new string[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ); // before Win, yes, Windows 8 is called 6.2 LOL
-		    public static readonly OperatingSystem WINDOWS_7 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,21, "Windows 7", new string[] { "Windows NT 6.1" }, new string[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ); // before Win, yes, Windows 7 is called 6.1 LOL
-		    public static readonly OperatingSystem WINDOWS_VISTA = new OperatingSystem(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,20, "Windows Vista", new string[] { "Windows NT 6" }, new string[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ); // before Win
-		    public static readonly OperatingSystem WINDOWS_2000 = new OperatingSystem(	Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,15, "Windows 2000", new string[] { "Windows NT 5.0" }, null, DeviceType.COMPUTER, null ); // before Win
+		    public static readonly OperatingSystem WINDOWS_8 = new OperatingSystem(		    Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,22, "Windows 8", new string[] { "Windows NT 6.2" }, new string[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ); // before Win, yes, Windows 8 is called 6.2 LOL
+		    public static readonly OperatingSystem WINDOWS_7 = new OperatingSystem(		    Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,21, "Windows 7", new string[] { "Windows NT 6.1" }, new string[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ); // before Win, yes, Windows 7 is called 6.1 LOL
+		    public static readonly OperatingSystem WINDOWS_VISTA = new OperatingSystem(	    Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,20, "Windows Vista", new string[] { "Windows NT 6" }, new string[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ); // before Win
+		    public static readonly OperatingSystem WINDOWS_2000 = new OperatingSystem(	    Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,15, "Windows 2000", new string[] { "Windows NT 5.0" }, null, DeviceType.COMPUTER, null ); // before Win
 		    public static readonly OperatingSystem WINDOWS_XP = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,10, "Windows XP", new string[] { "Windows NT 5"}, new string[] { "ggpht.com"  }, DeviceType.COMPUTER, null ); // before Win, 5.1 and 5.2 are basically XP systems
+            public static readonly OperatingSystem WINDOWS_10_MOBILE = new OperatingSystem( Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 54, "Windows 10 Mobile", new string[] { "Windows Phone 10" },  null, DeviceType.MOBILE, null ); 
 		    public static readonly OperatingSystem WINDOWS_PHONE8_1 = new OperatingSystem(  Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 53, "Windows Phone 8.1", new string[] { "Windows Phone 8.1" },  null, DeviceType.MOBILE, null ); // before Win
 		    public static readonly OperatingSystem WINDOWS_PHONE8 = new OperatingSystem(    Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 52, "Windows Phone 8", new string[] { "Windows Phone 8" },  null, DeviceType.MOBILE, null ); // before Win
 		    public static readonly OperatingSystem WINDOWS_MOBILE7 = new OperatingSystem(   Manufacturer.MICROSOFT,OperatingSystem.WINDOWS, 51, "Windows Phone 7", new string[] { "Windows Phone OS 7" },  null, DeviceType.MOBILE, null ); // should be Windows Phone 7 but to keep it compatible we'll leave the name as is.
@@ -91,12 +92,12 @@ namespace eu.bitwalker.useragentutils
 		    public static readonly OperatingSystem WINDOWS_98 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,5, "Windows 98", new string[] { "Windows 98","Win98" },  new string[] { "Palm" }, DeviceType.COMPUTER, null ); // before Win 
 		    public static readonly OperatingSystem XBOX_OS = new OperatingSystem(           Manufacturer.MICROSOFT, OperatingSystem.WINDOWS,62, "Xbox OS",new string[]{"xbox"},new string[]{}, DeviceType.GAME_CONSOLE, null);
 
-	    public static readonly OperatingSystem ANDROID = new OperatingSystem(		Manufacturer.GOOGLE,null, 0, "Android", new string[] { "Android" },  null, DeviceType.MOBILE, null );
+	    public static readonly OperatingSystem ANDROID = new OperatingSystem(		Manufacturer.GOOGLE,null, 0, "Android", new string[] { "Android" }, new string[] { "Ubuntu" }, DeviceType.MOBILE, null );
             public static readonly OperatingSystem ANDROID5 = new OperatingSystem(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 5, "Android 5.x", new string[] { "Android 5", "Android-5" },   new string[] { "glass" }, DeviceType.MOBILE, null );
             public static readonly OperatingSystem ANDROID5_TABLET = new OperatingSystem(Manufacturer.GOOGLE,OperatingSystem.ANDROID5, 50, "Android 5.x Tablet", new string[] { "Android 5", "Android-5"}, new string[] { "mobile", "glass" }, DeviceType.TABLET, null );
-		    public static readonly OperatingSystem ANDROID4 = new OperatingSystem(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 4, "Android 4.x", new string[] { "Android 4", "Android-4" },   new string[] { "glass" }, DeviceType.MOBILE, null );
-		    public static readonly OperatingSystem ANDROID4_TABLET = new OperatingSystem(Manufacturer.GOOGLE,OperatingSystem.ANDROID4, 40, "Android 4.x Tablet", new string[] { "Android 4", "Android-4"}, new string[] { "mobile", "glass" }, DeviceType.TABLET, null );
-		    public static readonly OperatingSystem ANDROID4_WEARABLE = new OperatingSystem(Manufacturer.GOOGLE,OperatingSystem.ANDROID, 400, "Android 4.x", new string[] { "Android 4" }, null, DeviceType.WEARABLE, null );
+		    public static readonly OperatingSystem ANDROID4 = new OperatingSystem(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 4, "Android 4.x", new string[] { "Android 4", "Android-4" },   new string[] { "glass", "ubuntu" }, DeviceType.MOBILE, null );
+		    public static readonly OperatingSystem ANDROID4_TABLET = new OperatingSystem(Manufacturer.GOOGLE,OperatingSystem.ANDROID4, 40, "Android 4.x Tablet", new string[] { "Android 4", "Android-4"}, new string[] { "mobile", "glass", "ubuntu" }, DeviceType.TABLET, null );
+		    public static readonly OperatingSystem ANDROID4_WEARABLE = new OperatingSystem(Manufacturer.GOOGLE,OperatingSystem.ANDROID, 400, "Android 4.x", new string[] { "Android 4" }, new string[] { "ubuntu" }, DeviceType.WEARABLE, null );
 		    public static readonly OperatingSystem ANDROID3_TABLET = new OperatingSystem(Manufacturer.GOOGLE,OperatingSystem.ANDROID, 30, "Android 3.x Tablet", new string[] { "Android 3" },  null, DeviceType.TABLET, null ); // as long as there are not Android 3.x phones this should be enough
 		    public static readonly OperatingSystem ANDROID2 = new OperatingSystem(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 2, "Android 2.x", new string[] { "Android 2" },  null, DeviceType.MOBILE, null );
 		    public static readonly OperatingSystem ANDROID2_TABLET = new OperatingSystem(Manufacturer.GOOGLE,OperatingSystem.ANDROID2, 20, "Android 2.x Tablet", new string[] { "Kindle Fire", "GT-P1000","SCH-I800" },  null, DeviceType.TABLET, null );
@@ -104,7 +105,7 @@ namespace eu.bitwalker.useragentutils
 		    /**
 		     * Generic Android mobile device without OS version number information
 		     */
-		    public static readonly OperatingSystem ANDROID_MOBILE = new OperatingSystem(	Manufacturer.GOOGLE,OperatingSystem.ANDROID, 11, "Android Mobile", new string[] { "Mobile" },  null, DeviceType.MOBILE, null );
+		    public static readonly OperatingSystem ANDROID_MOBILE = new OperatingSystem(	Manufacturer.GOOGLE,OperatingSystem.ANDROID, 11, "Android Mobile", new string[] { "Mobile" }, new string[] { "ubuntu" }, DeviceType.MOBILE, null );
 		    /**
 		     * Generic Android tablet device without OS version number information
 		     */
@@ -176,6 +177,8 @@ namespace eu.bitwalker.useragentutils
 		    public static readonly OperatingSystem KINDLE3 = new OperatingSystem(		Manufacturer.AMAZON,OperatingSystem.KINDLE, 30, "Linux (Kindle 3)", new string[] { "Kindle/3" }, null, DeviceType.TABLET, null );	
 		    public static readonly OperatingSystem KINDLE2 = new OperatingSystem(		Manufacturer.AMAZON,OperatingSystem.KINDLE, 20, "Linux (Kindle 2)", new string[] { "Kindle/2" }, null, DeviceType.TABLET, null );	
 	    public static readonly OperatingSystem LINUX = new OperatingSystem(			Manufacturer.OTHER,null, 2, "Linux", new string[] { "Linux" , "CamelHttpStream" }, null, DeviceType.COMPUTER, null ); // CamelHttpStream is being used by Evolution, an email client for Linux
+            public static readonly OperatingSystem UBUNTU = new OperatingSystem(Manufacturer.CONONICAL, OperatingSystem.LINUX, 1, "Ubuntu", new string[] {"ubuntu"}, null, DeviceType.COMPUTER, null);
+	            public static readonly OperatingSystem UBUNTU_TOUCH_MOBILE = new OperatingSystem(Manufacturer.CONONICAL, OperatingSystem.UBUNTU, 200, "Ubuntu Touch (mobile)", new string[] {"mobile"}, null, DeviceType.MOBILE, null);
 
 	    /**
 	     * Other Symbian OS versions

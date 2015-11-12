@@ -9,7 +9,7 @@ public class FirefoxParameterizedTest :
 				// firefox3
 				[TestCase(
 						"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.14) Gecko/2009090216 Ubuntu/9.04 (jaunty) Firefox/3.0.14",
-						"FIREFOX3", "3.0.14", "LINUX" )]
+						"FIREFOX3", "3.0.14", "UBUNTU" )]
 				// firefox4
 				[TestCase(
 						"Mozilla/5.0 (X11; Linux x86_64; rv:2.0b4) Gecko/20100818 Firefox/4.0b4",
