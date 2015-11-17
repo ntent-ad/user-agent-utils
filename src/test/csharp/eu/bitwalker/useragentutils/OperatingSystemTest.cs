@@ -457,6 +457,30 @@ namespace eu.bitwalker.useragentutils
             null
         };
 
+
+        /*
+          NTENT
+        */
+        private string[] ntent_ios9 =
+        {
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 NTENTBrowser/1.0.0.1 (KZ)"
+        };
+        private string[] ntent_ios8_3 =
+        {
+            "Mozilla / 5.0(iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit / 600.1.4(KHTML, like Gecko) Mobile / 12F70 NTENTBrowser / 1.0.0.1(KZ)"
+        };
+        private string[] ntent_android5 =
+        {
+            "Mozilla/5.0 (Android 5.1.1; Nexus 6 Build/LMY48M) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/1.2.3 (KZ) Mobile Safari/537.36",
+            "Mozilla/5.0 (Android 5.0.2; MotoE2(4G-LTE) Build/LXI22.50-24.1) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/1.0.0.250 (KZ) Mobile Safari/537.36",
+        };
+        private string[] ntent_android4 =
+        {
+            "Mozilla/5.0 (Android 4.2.2; GT-S7582 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/1.0.0.200 (KZ) Mobile Safari/537.36"
+        };
+
+
+
         /**
 	 * Test method for {@link eu.bitwalker.useragentutils.OperatingSystem#isInUserAgentString(java.lang.String)}.
 	 */
@@ -532,6 +556,13 @@ namespace eu.bitwalker.useragentutils
             testAgents(unknown, OperatingSystem.UNKNOWN);
             testAgents(ubuntu_touch, OperatingSystem.UBUNTU_TOUCH_MOBILE);
 
+            /*
+              NTENT
+            */
+            testAgents(ntent_android5, OperatingSystem.ANDROID5);
+            testAgents(ntent_android4, OperatingSystem.ANDROID4);
+            testAgents(ntent_ios9, OperatingSystem.iOS9_IPHONE);
+            testAgents(ntent_ios8_3, OperatingSystem.iOS8_3_IPHONE);
         }
 
         [Test]

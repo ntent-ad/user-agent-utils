@@ -167,6 +167,12 @@ namespace eu.bitwalker.useragentutils
         public static readonly Manufacturer CONONICAL = new Manufacturer(25, "Canonical Ltd.");
 
 
+        /**
+         * Ntent.
+         */
+        public static readonly Manufacturer NTENT = new Manufacturer(240, "NTENT");
+
+
         private readonly short id;
 	    private readonly string name;
 	

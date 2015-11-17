@@ -639,6 +639,15 @@ namespace eu.bitwalker.useragentutils
             // Gmail proxy server
         };
 
+        /*
+          NTENT
+        */
+        private string[] ntent =
+        {
+            "Mozilla/5.0 (iOS 9.0.1; iPhone 5s Build/ME305LL/A ) AppleWebKit/600.1.4 (KHTML, like Gecko) NTENTBrowser/1.0.0.1 (KZ)",
+            "Mozilla/5.0 (Android 5.1.1; Nexus 6 Build/LMY48M) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/1.2.3(KZ) Safari/537.36"
+        };
+
         /**
 	 * Test method for {@link eu.bitwalker.useragentutils.Browser#isInUserAgentString(java.lang.String)}.
 	 */
@@ -695,6 +704,17 @@ namespace eu.bitwalker.useragentutils
             testVersions("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36 OPR/23.0.1522.60",new Version("23.0.1522.60", "23", "0"));
             testVersions("Mozilla/5.0 (Linux; Android 4.1.2; HTC One SV Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.81 Mobile Safari/537.36 OPR/28.0.1764.90386",new Version("28.0.1764.90386", "28", "0"));
 
+
+            /*
+              NTENT
+            */
+            testVersions("Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 NTENTBrowser/1.0.0.1 (KZ)", new Version("1.0.0.1", "1", "0"));
+            testVersions("Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12F70 NTENTBrowser/1.0.0.1 (KZ)", new Version("1.0.0.1", "1", "0"));
+            testVersions("Mozilla/5.0 (Android 5.1.1; Nexus 6 Build/LMY48M) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/1.2.3 (KZ) Mobile Safari/537.36", new Version("1.2.3", "1", "2"));
+            testVersions("Mozilla/5.0 (Android 5.0.2; MotoE2(4G-LTE) Build/LXI22.50-24.1) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/1.0.0.250 (KZ) Mobile Safari/537.36", new Version("1.0.0.250", "1", "0"));
+            testVersions("Mozilla/5.0 (Android 4.2.2; GT-S7582 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/1.0.0.200 (KZ) Mobile Safari/537.36", new Version("1.0.0.200", "1", "0"));
+            
+            
         }
 
         private void testVersions(String ua, Version expectedVersion)
@@ -804,6 +824,11 @@ namespace eu.bitwalker.useragentutils
             testAgents(airApp, Browser.ADOBE_AIR);
             testAgents(blackberry10, Browser.BLACKBERRY10);
             testAgents(vivaldi, Browser.VIVALDI);
+
+            /*
+              NTENT
+            */
+            testAgents(ntent, Browser.NTENT);
         }
 
         [Test]

@@ -172,7 +172,13 @@ namespace eu.bitwalker.useragentutils
 			
 	    public static readonly Browser OMNIWEB = new Browser(		    Manufacturer.OTHER, null, 2, "Omniweb", new string[] { "OmniWeb" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null); // 
 
-	    public static readonly Browser SAFARI = new Browser(			Manufacturer.APPLE, null, 1, "Safari", new string[] { "Safari" }, new string[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi","CFNetwork" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)" );  // before AppleWebKit
+        /* 
+            NTENT - before SAFARI and generic AppleWebKit  
+        */
+        public static readonly Browser NTENT = new Browser(Manufacturer.NTENT, null, 1, "NTENT Browser", new[] { "NTENTBrowser" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, @"NTENTBrowser\/(([0-9]+)\.([\d]+)\.?([\d]+)?\.?([\d]+)?)");
+
+
+        public static readonly Browser SAFARI = new Browser(			Manufacturer.APPLE, null, 1, "Safari", new string[] { "Safari" }, new string[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi","CFNetwork" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)" );  // before AppleWebKit
 		    public static readonly Browser BLACKBERRY10 = new Browser(  Manufacturer.BLACKBERRY, Browser.SAFARI, 10, "BlackBerry", new string[] { "BB10" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null);
 		    public static readonly Browser MOBILE_SAFARI = new Browser(	Manufacturer.APPLE, Browser.SAFARI, 2, "Mobile Safari", new string[] { "Mobile Safari","Mobile/" }, new string[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null );  // before Safari
 		    public static readonly Browser SILK = new Browser(			Manufacturer.AMAZON, Browser.SAFARI, 15, "Silk", new string[] { "Silk/" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Silk\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\-[\\w]+)?)" );  // http://en.wikipedia.org/wiki/Amazon_Silk
@@ -183,10 +189,10 @@ namespace eu.bitwalker.useragentutils
 		    public static readonly Browser SAFARI5 = new Browser(		Manufacturer.APPLE, Browser.SAFARI, 3, "Safari 5", new string[] { "Version/5" }, new string[]{"Google Web Preview"}, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null );  // before AppleWebKit
 		    public static readonly Browser SAFARI4 = new Browser(		Manufacturer.APPLE, Browser.SAFARI, 4, "Safari 4", new string[] { "Version/4" }, new string[] { "Googlebot-Mobile" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null );  // before AppleWebKit
 
-	    /**
+        /**
 	     * Opera Coast mobile browser, http://en.wikipedia.org/wiki/Opera_Coast	
 	     */
-	    public static readonly Browser COAST = new Browser(			Manufacturer.OPERA, null, 500, "Opera", new string[] { " Coast/" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "Coast\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");   
+        public static readonly Browser COAST = new Browser(			Manufacturer.OPERA, null, 500, "Opera", new string[] { " Coast/" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "Coast\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");   
 		    public static readonly Browser COAST1 = new Browser(			Manufacturer.OPERA, Browser.COAST, 501, "Opera", new string[] { " Coast/1." }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "Coast\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)");   
 		
 	    public static readonly Browser OPERA = new Browser(			    Manufacturer.OPERA, null, 1, "Opera", new string[] { " OPR/", "Opera" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "[o][p][e]?[r][a]?\\/(([\\d]+)\\.([\\w]+)(\\.([\\w]+))?(\\.([\\w]+))?)");   // before MSIE
@@ -319,6 +325,7 @@ namespace eu.bitwalker.useragentutils
 	    public static readonly Browser DOWNLOAD = new Browser(   	Manufacturer.OTHER, null, 16, "Downloading Tool", new string[]{"cURL","wget", "ggpht.com", "Apache-HttpClient"}, null, BrowserType.TOOL, RenderingEngine.OTHER, null);
     
 	    public static readonly Browser UNKNOWN = new Browser(		Manufacturer.OTHER, null, 14, "Unknown", new string[0], null, BrowserType.UNKNOWN, RenderingEngine.OTHER, null );
+
 	
 	    /*
 	     * An id for each browser version which is unique per manufacturer. 
