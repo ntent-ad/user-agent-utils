@@ -7,8 +7,7 @@ import java.util.Collection;
 
 import org.junit.runners.Parameterized.Parameters;
 
-import eu.bitwalker.useragentutils.Browser;
-import eu.bitwalker.useragentutils.OperatingSystem;
+import eu.bitwalker.useragentutils.*;
 
 public class BotParameterizedTest extends AbstractUserAgentParameterizedTest {
 
@@ -29,7 +28,7 @@ public class BotParameterizedTest extends AbstractUserAgentParameterizedTest {
 				{
 						"Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
 						BOT, null, OperatingSystem.UNKNOWN },
-				{ 		"Googlebot-Image/1.0", 
+				{ "Googlebot-Image/1.0",
 						Browser.BOT, null, OperatingSystem.UNKNOWN },
 				{
 						"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.8 (KHTML, like Gecko; Google Web Preview) Chrome/19.0.1084.36 Safari/536.8",
@@ -37,7 +36,7 @@ public class BotParameterizedTest extends AbstractUserAgentParameterizedTest {
 				{
 						"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5 (Applebot/0.1)",
 						Browser.BOT, null, OperatingSystem.UNKNOWN },
-				{ 		"Mediapartners-Google", 
+				{ "Mediapartners-Google",
 						Browser.BOT, null, OperatingSystem.UNKNOWN },
 				{
 						"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b",
@@ -72,10 +71,20 @@ public class BotParameterizedTest extends AbstractUserAgentParameterizedTest {
 				{
 						"Mozilla/5.0 (compatible; Ask Jeeves/Teoma; +http://about.ask.com/en/docs/about/webmasters.shtml)",
 						Browser.BOT, null, OperatingSystem.UNKNOWN },
-				{ 		"ThumbSniper (http://thumbsniper.com)", 
+				{ "ThumbSniper (http://thumbsniper.com)",
 						Browser.BOT, null, OperatingSystem.UNKNOWN },
-				{ 		"Phantom.js bot", 
+				{ "Phantom.js bot",
 						Browser.BOT, null, OperatingSystem.UNKNOWN },
+				{ "Mozilla/5.0 (compatible; Yahoo Ad monitoring; https://help.yahoo.com/kb/yahoo-ad-monitoring-SLN24857.html)",
+						Browser.BOT, null, OperatingSystem.UNKNOWN
+				},
+				{
+						"Mozilla/5.0 (iPhone; CPU iPhone OS 7_1 like Mac OS X) AppleWebKit (KHTML, like Gecko) Mobile (compatible; Yahoo Ad monitoring; https://help.yahoo.com/kb/yahoo-ad-monitoring-SLN24857.html)",
+						Browser.BOT, null, OperatingSystem.UNKNOWN
+				},
+				{ "Mozilla/5.0 (iPhone; CPU iPhone OS 7_1 like Mac OS X) Mobile (compatible; Yahoo Ad monitoring; https://help.yahoo.com/kb/yahoo-ad-monitoring-SLN",
+						Browser.BOT, null, OperatingSystem.UNKNOWN
+				}
 		});
 	}
 }

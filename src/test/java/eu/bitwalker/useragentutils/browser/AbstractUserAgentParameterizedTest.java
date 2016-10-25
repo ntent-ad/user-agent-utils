@@ -43,7 +43,7 @@ public abstract class AbstractUserAgentParameterizedTest {
 	public void shouldParseUserAgent() throws Exception {
 		UserAgent userAgent = UserAgent
 				.parseUserAgentString(this.userAgentValue);
-		assertEquals(this.expectedBrowser, userAgent.getBrowser());
+		assertEquals(this.userAgentValue, this.expectedBrowser, userAgent.getBrowser());
 
 		Version browserVersion = userAgent.getBrowserVersion();
 		if (null != browserVersion) {

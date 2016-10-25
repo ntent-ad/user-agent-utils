@@ -6,8 +6,7 @@ import java.util.Collection;
 
 import org.junit.runners.Parameterized.Parameters;
 
-import eu.bitwalker.useragentutils.Browser;
-import eu.bitwalker.useragentutils.OperatingSystem;
+import eu.bitwalker.useragentutils.*;
 
 public class ChromeParameterizedTest extends AbstractUserAgentParameterizedTest {
 
@@ -68,10 +67,21 @@ public class ChromeParameterizedTest extends AbstractUserAgentParameterizedTest 
 						"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36",
 						Browser.CHROME29, "29.0.1547.65", OperatingSystem.MAC_OS_X },
 				{
-							"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36",
-						Browser.CHROME43, "43.0.2357.124", OperatingSystem.MAC_OS_X
+						"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36",
+						Browser.CHROME43, "43.0.2357.124", OperatingSystem.MAC_OS_X },
+				{
+						"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36",
+						Browser.CHROME49, "49.0.2623.87", OperatingSystem.WINDOWS_7 },
+				{
+						"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36",
+						Browser.CHROME50, "50.0.2661.75", OperatingSystem.WINDOWS_7 },
+				{
+						"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36",
+						Browser.CHROME53, "53.0.2785.143", OperatingSystem.WINDOWS_7 },
+				{
+						"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2785.143 Safari/537.36",
+						Browser.CHROME54, "54.0.2785.143", OperatingSystem.WINDOWS_7
 				}
-					
 		});
 	}
 }

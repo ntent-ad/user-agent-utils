@@ -6,8 +6,7 @@ import java.util.Collection;
 
 import org.junit.runners.Parameterized.Parameters;
 
-import eu.bitwalker.useragentutils.Browser;
-import eu.bitwalker.useragentutils.OperatingSystem;
+import eu.bitwalker.useragentutils.*;
 
 public class OthersParameterizedTest extends AbstractUserAgentParameterizedTest {
 
@@ -72,7 +71,10 @@ public class OthersParameterizedTest extends AbstractUserAgentParameterizedTest 
 						Browser.VIVALDI, "1.0.111.2", OperatingSystem.MAC_OS_X },
 				{
 						"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.114 Safari/537.36 Vivaldi/1.0.111.2",
-						Browser.VIVALDI, "1.0.111.2", OperatingSystem.WINDOWS_7 }
+						Browser.VIVALDI, "1.0.111.2", OperatingSystem.WINDOWS_7 },
+				{
+						"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586",
+						Browser.EDGE13, "13.10586", OperatingSystem.WINDOWS_10 }
 
 		});
 	}
