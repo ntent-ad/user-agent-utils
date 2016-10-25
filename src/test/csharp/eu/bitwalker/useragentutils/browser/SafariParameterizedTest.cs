@@ -5,9 +5,6 @@ namespace  eu.bitwalker.useragentutils.browser {
 
 
 public class SafariParameterizedTest : AbstractUserAgentParameterizedTest { 
-                [TestCase(
-        		        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/601.1.56 (KHTML, like Gecko) Version/9.0 Safari/601.1.56",
-					    "SAFARI9", "9.0", "MAC_OS_X")]
 				// safari
 				[TestCase(
 						"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/525.28.3 (KHTML, like Gecko) Version/3.2.3 Safari/525.28.3",
@@ -42,10 +39,14 @@ public class SafariParameterizedTest : AbstractUserAgentParameterizedTest {
 				[TestCase(
 						"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/531.2+ (KHTML, like Gecko) Version/4.0.1 Safari/530.18",
 						"SAFARI4", "4.0.1", "MAC_OS_X" )]
-				// mobileSafari
-				[TestCase(
+                [TestCase(
+                        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/601.1.56 (KHTML, like Gecko) Version/9.0 Safari/601.1.56",
+                        "SAFARI9", "9.0", "MAC_OS_X")]
+
+                // mobileSafari
+                [TestCase(
 						"Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
-						"MOBILE_SAFARI", "4.0", "ANDROID2" )]
+                        "ANDROID_WEB_KIT", "4.0", "ANDROID2" )]
 				[TestCase(
 						"Mozilla/5.0 (iPod; U; CPU iPhone OS 2_0 like Mac OS X; de-de) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5A347 Safari/525.20",
 						"MOBILE_SAFARI", "3.1.1", "MAC_OS_X_IPHONE" )]
@@ -54,16 +55,20 @@ public class SafariParameterizedTest : AbstractUserAgentParameterizedTest {
 						"MOBILE_SAFARI", "3.0", "MAC_OS_X_IPOD" )]
 				[TestCase(
 						"Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B367 Safari/531.21.10",
-						"MOBILE_SAFARI", "4.0.4", "MAC_OS_X_IPAD" )]
+                        "MOBILE_SAFARI4", "4.0.4", "MAC_OS_X_IPAD" )]
 				[TestCase(
 						"Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",
-						"MOBILE_SAFARI", "4.0.5", "iOS4_IPHONE" )]
+                        "MOBILE_SAFARI4", "4.0.5", "iOS4_IPHONE" )]
 				[TestCase(
 						"Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3",
-						"MOBILE_SAFARI", "5.1", "iOS5_IPHONE" )]
+                        "MOBILE_SAFARI5", "5.1", "iOS5_IPHONE" )]
 				[TestCase(
 						"Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3",
-						"MOBILE_SAFARI", "5.1", "iOS5_IPHONE" )]
+                        "MOBILE_SAFARI5", "5.1", "iOS5_IPHONE" )]
+                [TestCase(
+                        "Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13A4325c Safari/601.1",
+						"MOBILE_SAFARI9", "9.0", "iOS9_IPAD" )]
+
     [Test]
     public void testData(String userAgentValue,
             string expectedBrowserStr, String expectedBrowserVersion,

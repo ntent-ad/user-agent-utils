@@ -57,6 +57,11 @@ public class OthersParameterizedTest : AbstractUserAgentParameterizedTest {
 				[TestCase(
 						"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.114 Safari/537.36 Vivaldi/1.0.111.2",
 						"VIVALDI", "1.0.111.2", "WINDOWS_7" )]
+                [TestCase(
+                        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586",
+						"EDGE13", "13.10586", "WINDOWS_10" )]
+    
+
     [Test]
     public void testData(String userAgentValue,
             string expectedBrowserStr, String expectedBrowserVersion,

@@ -76,7 +76,7 @@ namespace eu.bitwalker.useragentutils
 	    /**
 	     * Windows Mobile / Windows CE. Exact version unknown.
 	     */
-	    public static readonly OperatingSystem WINDOWS = new OperatingSystem(		Manufacturer.MICROSOFT,null,1, "Windows", new string[] { "Windows" }, new string[] { "Palm", "ggpht.com"  }, DeviceType.COMPUTER, null ); // catch the rest of older Windows systems (95, NT,...)
+	    public static readonly OperatingSystem WINDOWS = new OperatingSystem(		Manufacturer.MICROSOFT,null,1, "Windows", new string[] { "Windows", "Win32" }, new string[] { "Palm", "ggpht.com"  }, DeviceType.COMPUTER, null ); // catch the rest of older Windows systems (95, NT,...)
 		    public static readonly OperatingSystem WINDOWS_10 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,24, "Windows 10", new string[] { "Windows NT 6.4", "Windows NT 10" }, null, DeviceType.COMPUTER, null ); // before Win, yes, Windows 10 is called 6.4 LOL
 		    public static readonly OperatingSystem WINDOWS_81 = new OperatingSystem(		Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,23, "Windows 8.1", new string[] { "Windows NT 6.3" }, null, DeviceType.COMPUTER, null ); // before Win, yes, Windows 8.1 is called 6.3 LOL
 		    public static readonly OperatingSystem WINDOWS_8 = new OperatingSystem(		    Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,22, "Windows 8", new string[] { "Windows NT 6.2" }, new string[]{"Xbox","Xbox One"}, DeviceType.COMPUTER, null ); // before Win, yes, Windows 8 is called 6.2 LOL
@@ -93,6 +93,8 @@ namespace eu.bitwalker.useragentutils
 		    public static readonly OperatingSystem XBOX_OS = new OperatingSystem(           Manufacturer.MICROSOFT, OperatingSystem.WINDOWS,62, "Xbox OS",new string[]{"xbox"},new string[]{}, DeviceType.GAME_CONSOLE, null);
 
 	    public static readonly OperatingSystem ANDROID = new OperatingSystem(		Manufacturer.GOOGLE,null, 0, "Android", new string[] { "Android" }, new string[] { "Ubuntu" }, DeviceType.MOBILE, null );
+            public static readonly OperatingSystem ANDROID6 = new OperatingSystem(Manufacturer.GOOGLE, OperatingSystem.ANDROID, 6, "Android 6.x", new String[] { "Android 6", "Android-6" }, new String[] { "glass" }, DeviceType.MOBILE, null);
+            public static readonly OperatingSystem ANDROID6_TABLET = new OperatingSystem(Manufacturer.GOOGLE, OperatingSystem.ANDROID6, 60, "Android 6.x Tablet", new String[] { "Android 6", "Android-6" }, new String[] { "mobile", "glass" }, DeviceType.TABLET, null);
             public static readonly OperatingSystem ANDROID5 = new OperatingSystem(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 5, "Android 5.x", new string[] { "Android 5", "Android-5" },   new string[] { "glass" }, DeviceType.MOBILE, null );
             public static readonly OperatingSystem ANDROID5_TABLET = new OperatingSystem(Manufacturer.GOOGLE,OperatingSystem.ANDROID5, 50, "Android 5.x Tablet", new string[] { "Android 5", "Android-5"}, new string[] { "mobile", "glass" }, DeviceType.TABLET, null );
 		    public static readonly OperatingSystem ANDROID4 = new OperatingSystem(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 4, "Android 4.x", new string[] { "Android 4", "Android-4" },   new string[] { "glass", "ubuntu" }, DeviceType.MOBILE, null );
@@ -118,14 +120,30 @@ namespace eu.bitwalker.useragentutils
 	    /**
 	     * PalmOS, exact version unkown
 	     */
-	    public static readonly OperatingSystem WEBOS = new OperatingSystem(			Manufacturer.HP,null,11, "WebOS", new string[] { "webOS" },  null, DeviceType.MOBILE, null ); 
-	    public static readonly OperatingSystem PALM = new OperatingSystem(			Manufacturer.HP,null,10, "PalmOS", new string[] { "Palm" },  null, DeviceType.MOBILE, null ); 
+	    public static readonly OperatingSystem PALM = new OperatingSystem(			Manufacturer.HP,null,10, "PalmOS", new string[] { "Palm" },  null, DeviceType.MOBILE, null );
+
+        public static readonly OperatingSystem WEBOS = new OperatingSystem(Manufacturer.HP, null, 11, "WebOS", new String[] { "webOS", "hp-tablet", "hpwOS" }, null, DeviceType.MOBILE, null);
+            public static readonly OperatingSystem WEBOS1 = new OperatingSystem(Manufacturer.HP, OperatingSystem.WEBOS, 12, "WebOS 1.0", new String[] { "webOS/1.0", "hpwOS/1.0" }, null, DeviceType.MOBILE, null);
+            public static readonly OperatingSystem WEBOS1_1 = new OperatingSystem(Manufacturer.HP, OperatingSystem.WEBOS, 13, "WebOS 1.1", new String[] { "webOS/1.1", "hpwOS/1.1" }, null, DeviceType.MOBILE, null);
+            public static readonly OperatingSystem WEBOS1_2 = new OperatingSystem(Manufacturer.HP, OperatingSystem.WEBOS, 14, "WebOS 1.2", new String[] { "webOS/1.2", "hpwOS/1.2" }, null, DeviceType.MOBILE, null);
+            public static readonly OperatingSystem WEBOS1_3 = new OperatingSystem(Manufacturer.HP, OperatingSystem.WEBOS, 15, "WebOS 1.3", new String[] { "webOS/1.3", "hpwOS/1.3" }, null, DeviceType.MOBILE, null);
+            public static readonly OperatingSystem WEBOS1_4 = new OperatingSystem(Manufacturer.HP, OperatingSystem.WEBOS, 16, "WebOS 1.4", new String[] { "webOS/1.4", "hpwOS/1.4" }, null, DeviceType.MOBILE, null);
+            public static readonly OperatingSystem WEBOS2 = new OperatingSystem(Manufacturer.HP, OperatingSystem.WEBOS, 17, "WebOS 2.0", new String[] { "webOS/2.0", "hpwOS/2.0"}, null, DeviceType.MOBILE, null);
+            public static readonly OperatingSystem WEBOS2_1 = new OperatingSystem(Manufacturer.HP, OperatingSystem.WEBOS, 18, "WebOS 2.1", new String[] { "webOS/2.1", "hpwOS/2.1" }, null, DeviceType.MOBILE, null);
+            public static readonly OperatingSystem WEBOS2_2 = new OperatingSystem(Manufacturer.HP, OperatingSystem.WEBOS, 19, "WebOS 2.2", new String[] { "webOS/2.2", "hpwOS/2.2" }, null, DeviceType.MOBILE, null);
+            public static readonly OperatingSystem WEBOS2_3 = new OperatingSystem(Manufacturer.HP, OperatingSystem.WEBOS, 20, "WebOS 2.3", new String[] { "webOS/2.3", "hpwOS/2.3" }, null, DeviceType.MOBILE, null);
+            public static readonly OperatingSystem WEBOS3 = new OperatingSystem(Manufacturer.HP, OperatingSystem.WEBOS, 21, "WebOS 3.0", new String[] { "webOS/3.0", "hpwOS/3.0" }, null, DeviceType.MOBILE, null);
+
 	    public static readonly OperatingSystem MEEGO = new OperatingSystem(			Manufacturer.NOKIA,null,3, "MeeGo", new string[] { "MeeGo" },  null, DeviceType.MOBILE, null );		
 
 	    /**
 	     * iOS4, with the release of the iPhone 4, Apple renamed the OS to iOS.
 	     */	
-	    public static readonly OperatingSystem IOS = new OperatingSystem(			Manufacturer.APPLE,null, 2, "iOS", new string[] { "iPhone OS", "like Mac OS X" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
+	    public static readonly OperatingSystem IOS = new OperatingSystem(			Manufacturer.APPLE,null, 2, "iOS", new string[] { "iPhone", "like Mac OS X" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
+            public static readonly OperatingSystem iOS10_IPHONE = new OperatingSystem(Manufacturer.APPLE, OperatingSystem.IOS, 100, "iOS 10 (iPhone)", new String[] { "iPhone OS 10" }, null, DeviceType.MOBILE, null); // before MAC_OS_X_IPHONE for all older versions
+            public static readonly OperatingSystem iOS9_3_IPHONE = new OperatingSystem(Manufacturer.APPLE, OperatingSystem.IOS, 93, "iOS 9.3 (iPhone)", new String[] { "iPhone OS 9_3" }, null, DeviceType.MOBILE, null); // before MAC_OS_X_IPHONE for all older versions
+            public static readonly OperatingSystem iOS9_2_IPHONE = new OperatingSystem(Manufacturer.APPLE, OperatingSystem.IOS, 92, "iOS 9.2 (iPhone)", new String[] { "iPhone OS 9_2" }, null, DeviceType.MOBILE, null); // before MAC_OS_X_IPHONE for all older versions
+            public static readonly OperatingSystem iOS9_1_IPHONE = new OperatingSystem(Manufacturer.APPLE, OperatingSystem.IOS, 91, "iOS 9.1 (iPhone)", new String[] { "iPhone OS 9_1" }, null, DeviceType.MOBILE, null); // before MAC_OS_X_IPHONE for all older versions
 		    public static readonly OperatingSystem iOS9_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 90, "iOS 9 (iPhone)", new string[] { "iPhone OS 9" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
 		    public static readonly OperatingSystem iOS8_4_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 49, "iOS 8.4 (iPhone)", new string[] { "iPhone OS 8_4" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
 		    public static readonly OperatingSystem iOS8_3_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 48, "iOS 8.3 (iPhone)", new string[] { "iPhone OS 8_3" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
@@ -137,6 +155,10 @@ namespace eu.bitwalker.useragentutils
 		    public static readonly OperatingSystem iOS5_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 42, "iOS 5 (iPhone)", new string[] { "iPhone OS 5" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
 		    public static readonly OperatingSystem iOS4_IPHONE = new OperatingSystem(	Manufacturer.APPLE,OperatingSystem.IOS, 41, "iOS 4 (iPhone)", new string[] { "iPhone OS 4" },  null, DeviceType.MOBILE, null ); // before MAC_OS_X_IPHONE for all older versions
 		    public static readonly OperatingSystem MAC_OS_X_IPAD = new OperatingSystem(	Manufacturer.APPLE, OperatingSystem.IOS, 50, "Mac OS X (iPad)", new string[] { "iPad" },  null, DeviceType.TABLET, null ); // before Mac OS X
+            public static readonly OperatingSystem iOS10_IPAD = new OperatingSystem(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 62, "iOS 10 (iPad)", new String[] { "OS 10_0" }, null, DeviceType.TABLET, null); // before Mac OS X
+            public static readonly OperatingSystem iOS9_3_IPAD = new OperatingSystem(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 61, "iOS 9.3 (iPad)", new String[] { "OS 9_3" }, null, DeviceType.TABLET, null); // before Mac OS X
+            public static readonly OperatingSystem iOS9_2_IPAD = new OperatingSystem(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 60, "iOS 9.2 (iPad)", new String[] { "OS 9_2" }, null, DeviceType.TABLET, null); // before Mac OS X
+            public static readonly OperatingSystem iOS9_1_IPAD = new OperatingSystem(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 59, "iOS 9.1 (iPad)", new String[] { "OS 9_1" }, null, DeviceType.TABLET, null); // before Mac OS X
 		    public static readonly OperatingSystem iOS9_IPAD = new OperatingSystem(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 58, "iOS 9 (iPad)", new string[] { "OS 9" },  null, DeviceType.TABLET, null ); // before Mac OS X
 		    public static readonly OperatingSystem iOS8_4_IPAD = new OperatingSystem(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 57, "iOS 8.4 (iPad)", new string[] { "OS 8_4" },  null, DeviceType.TABLET, null ); // before Mac OS X
 		    public static readonly OperatingSystem iOS8_3_IPAD = new OperatingSystem(	Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 56, "iOS 8.3 (iPad)", new string[] { "OS 8_3" },  null, DeviceType.TABLET, null ); // before Mac OS X
@@ -176,14 +198,15 @@ namespace eu.bitwalker.useragentutils
 	    public static readonly OperatingSystem KINDLE = new OperatingSystem(			Manufacturer.AMAZON,null, 1, "Linux (Kindle)", new string[] { "Kindle" }, null, DeviceType.TABLET, null );	
 		    public static readonly OperatingSystem KINDLE3 = new OperatingSystem(		Manufacturer.AMAZON,OperatingSystem.KINDLE, 30, "Linux (Kindle 3)", new string[] { "Kindle/3" }, null, DeviceType.TABLET, null );	
 		    public static readonly OperatingSystem KINDLE2 = new OperatingSystem(		Manufacturer.AMAZON,OperatingSystem.KINDLE, 20, "Linux (Kindle 2)", new string[] { "Kindle/2" }, null, DeviceType.TABLET, null );	
-	    public static readonly OperatingSystem LINUX = new OperatingSystem(			Manufacturer.OTHER,null, 2, "Linux", new string[] { "Linux" , "CamelHttpStream" }, null, DeviceType.COMPUTER, null ); // CamelHttpStream is being used by Evolution, an email client for Linux
+	    public static readonly OperatingSystem LINUX = new OperatingSystem(			Manufacturer.OTHER,null, 2, "Linux", new string[] { "Linux" , "CamelHttpStream" }, new String[] { "hpwOS", "webOS" }, DeviceType.COMPUTER, null ); // CamelHttpStream is being used by Evolution, an email client for Linux
+        public static readonly OperatingSystem FREE_BSD = new OperatingSystem(Manufacturer.OTHER, null, 5, "FreeBSD", new String[] { "FreeBSD"}, null, DeviceType.COMPUTER, null); 
             public static readonly OperatingSystem UBUNTU = new OperatingSystem(Manufacturer.CONONICAL, OperatingSystem.LINUX, 1, "Ubuntu", new string[] {"ubuntu"}, null, DeviceType.COMPUTER, null);
 	            public static readonly OperatingSystem UBUNTU_TOUCH_MOBILE = new OperatingSystem(Manufacturer.CONONICAL, OperatingSystem.UBUNTU, 200, "Ubuntu Touch (mobile)", new string[] {"mobile"}, null, DeviceType.MOBILE, null);
 
 	    /**
 	     * Other Symbian OS versions
 	     */
-	    public static readonly OperatingSystem SYMBIAN = new OperatingSystem(		Manufacturer.SYMBIAN,null, 1, "Symbian OS", new string[] { "Symbian", "Series60"},  null, DeviceType.MOBILE, null );	
+	    public static readonly OperatingSystem SYMBIAN = new OperatingSystem(		Manufacturer.SYMBIAN,null, 1, "Symbian OS", new string[] { "Symbian", "Series60", "S60", "SymbOS" },  null, DeviceType.MOBILE, null );	
 		    /**
 		     * Symbian OS 9.x versions. Being used by Nokia (N71, N73, N81, N82, N91, N92, N95, ...)
 		     */
@@ -214,7 +237,12 @@ namespace eu.bitwalker.useragentutils
 	    /**
 	     * Nintendo Wii game console.
 	     */
-	    public static readonly OperatingSystem WII = new OperatingSystem(			Manufacturer.NINTENDO,null, 1, "Nintendo Wii", new string[] { "Wii" }, null, DeviceType.GAME_CONSOLE, null ); 
+	    public static readonly OperatingSystem WII = new OperatingSystem(			Manufacturer.NINTENDO,null, 1, "Nintendo Wii", new string[] { "Wii" }, null, DeviceType.GAME_CONSOLE, null );
+        /**
+	     * Nintendo DS game console
+	     */
+        public static readonly OperatingSystem DS = new OperatingSystem(Manufacturer.NINTENDO, null, 2, "Nintendo DS", new String[] { "Nintendo DS", "Nintendo DSi", "Nintendo 3DS", "Nintendo 3DSi" }, null, DeviceType.GAME_CONSOLE, null);
+
 	    /**
 	     * BlackBerryOS. The BlackBerryOS exists in different version. How relevant those versions are, is not clear.
 	     */

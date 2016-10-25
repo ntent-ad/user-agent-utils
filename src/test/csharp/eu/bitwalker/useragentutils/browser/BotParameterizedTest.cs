@@ -64,6 +64,19 @@ namespace  eu.bitwalker.useragentutils.browser {
 				    [TestCase(
                         "Phantom.js bot", 
 						    "BOT", null, "UNKNOWN" )]
+	                [TestCase(
+	                    "Mozilla/5.0 (compatible; Yahoo Ad monitoring; https://help.yahoo.com/kb/yahoo-ad-monitoring-SLN24857.html)",
+	                    "BOT", null, "UNKNOWN"
+	                    )]
+	                [TestCase(
+	                    "Mozilla/5.0 (iPhone; CPU iPhone OS 7_1 like Mac OS X) AppleWebKit (KHTML, like Gecko) Mobile (compatible; Yahoo Ad monitoring; https://help.yahoo.com/kb/yahoo-ad-monitoring-SLN24857.html)",
+	                    "BOT", null, "UNKNOWN"
+	                    )]
+	                [TestCase(
+	                    "Mozilla/5.0 (iPhone; CPU iPhone OS 7_1 like Mac OS X) Mobile (compatible; Yahoo Ad monitoring; https://help.yahoo.com/kb/yahoo-ad-monitoring-SLN",
+	                    "BOT", null, "UNKNOWN"
+	                    )]
+
         public void testData(String userAgentValue,
                 string expectedBrowserStr, String expectedBrowserVersion,
                 string expectedOSStr)

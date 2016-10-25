@@ -47,11 +47,25 @@ public class FirefoxParameterizedTest :
 				// firefoxMobile
 				[TestCase(
 						"Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0",
-						"FIREFOX_MOBILE", "13.0", "ANDROID_MOBILE" )]
+                        "FIREFOX_MOBILE13", "13.0", "ANDROID_MOBILE" )]
 				// firefoxMobile23
 				[TestCase(
 						"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0",
 						"FIREFOX_MOBILE23", "23.0", "ANDROID_MOBILE" )]
+                [TestCase(
+                        "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0",
+						"FIREFOX45", "45.0", "WINDOWS_7" )]
+                [TestCase(
+                        "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0",
+						"FIREFOX46", "46.0", "WINDOWS_10" )]
+                [TestCase(
+                        "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0",
+						"FIREFOX49", "49.0", "WINDOWS_10" )]
+                [TestCase(
+                        "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/50.0",
+						"FIREFOX50", "50.0", "WINDOWS_10" )]
+
+
             [Test]
             public void testData(String userAgentValue,
                     string expectedBrowserStr, String expectedBrowserVersion,

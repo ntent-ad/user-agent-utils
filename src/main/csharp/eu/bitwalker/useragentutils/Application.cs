@@ -147,7 +147,11 @@ namespace eu.bitwalker.useragentutils
 	     * Checks if the given referrer string matches to the application. Only
 	     * checks for one specific application.
 	     */
-	    public bool isInReferrerString(string referrerString) {
+	    public bool isInReferrerString(string referrerString)
+	    {
+	        if (referrerString == null)
+	            return false;
+
             var referrerStringLowerCase = referrerString.ToLower();
 	        return isInReferrerStringLowerCase(referrerStringLowerCase);
 	    }

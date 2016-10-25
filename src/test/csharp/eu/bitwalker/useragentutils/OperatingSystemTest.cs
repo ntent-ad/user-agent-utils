@@ -118,20 +118,65 @@ namespace eu.bitwalker.useragentutils
             "Mozilla/4.76 (compatible; MSIE 6.0; U; Windows 95; PalmSource; PalmOS; WebPro; Tungsten Proxyless 1.1 320x320x16)"
         };
 
-        private String[] webOS =
+        private String[] webOS_1 =
+        {
+            "Mozilla/5.0 (webOS/1.0; U; en-US) AppleWebKit/525.27.1 (KHTML, like Gecko) Version/1.0 Safari/525.27.1 Pre/1.0"
+        };
+
+        private String[] webOS_1_1 =
+        {
+        };
+
+        private String[] webOS_1_2 =
+        {
+        };
+
+        private String[] webOS_1_3 =
         {
             "Mozilla/5.0 (webOS/1.3; U; en-US) AppleWebKit/525.27.1 (KHTML, like Gecko) Version/1.0 Safari/525.27.1 Desktop/1.0",
-            "Mozilla/5.0 (webOS/1.0; U; en-US) AppleWebKit/525.27.1 (KHTML, like Gecko) Version/1.0 Safari/525.27.1 Pre/1.0"
+            "Mozilla/5.0 (webOS/1.3; U; en-US) AppleWebKit/538.39.41 (KHTML, like Gecko) Version/1.0 Safari/538.39.41 Desktop/1.0"
+        };
+
+        private String[] webOS_1_4 =
+        {
+            "Mozilla/5.0 (webOS/1.4.1.1; U; en-US) AppleWebKit/532.2 (KHTML, like Gecko) Version/1.0 Safari/532.2 Pre/1.0"
+        };
+
+        private String[] webOS_2 =
+        {
+            "Mozilla/5.0 (hp-tablet; Linux; hpwOS/2.0; U; en-US) AppleWebKit/534.6 (KHTML, like Gecko) wOSBrowser/233.70 Safari/534.6 TouchPad/1.0"
+        };
+
+        private String[] webOS_2_1 =
+        {
+            "Mozilla/5.0 (Linux; webOS/2.1.2; U; xx-xx) AppleWebKit/534.6 (KHTML, like Gecko) webOSBrowser/221.11 Safari/534.6 Pre/3.0"
+        };
+
+        private String[] webOS_2_2 =
+        {
+            "Mozilla/5.0 (Linux; webOS/2.2.4; U; en-CA) AppleWebKit/534.6 (KHTML, like Gecko) webOSBrowser/221.56 Safari/534.6 Pre/3.0"
+        };
+
+        private String[] webOS_2_3 =
+        {
+        };
+
+        private String[] webOS_3 =
+        {
+            "Mozilla/5.0 (hp-tablet; Linux; hpwOS/3.0.2; U; de-DE) AppleWebKit/534.6 (KHTML, like Gecko) wOSBrowser/234.40.1 Safari/534.6 TouchPad/1.0",
+            "Mozilla/5.0 (hp-tablet; Linux; hpwOS/3.0.4; U; en-GB) AppleWebKit/534.6 (KHTML, like Gecko) wOSBrowser/234.76 Safari/534.6 TouchPad/1.0",
+            "Mozilla/5.0 (hp-tablet; Linux; hpwOS/3.0.0; U; en-US) AppleWebKit/534.6 (KHTML, like Gecko) wOSBrowser/233.70 Safari/534.6 TouchPad/1.0"
         };
 
         private String[] symbian9phones =
         {
+            "Mozilla/5.0 (SymbianOS/9.3; Series60/3.2 NokiaC5-00.2/071.003; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.1.26 Mobile Safari/533.4 3gpp-gba",
             "Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaN95/10.0.018; Profile/MIDP-2.0 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413",
             "Mozilla/5.0 (SymbianOS/9.1; U; en-us) AppleWebKit/413 (KHTML, like Gecko) Safari/413",
             // No symbian in string. from 3.0 on it is Symbian OS 9.
             "NokiaN80-3/1.0552.0.7Series60/3.0Profile/MIDP-2.0Configuration/CLDC-1.1",
             "NokiaN73-1/3.0638.0.0.1 Series60/3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1",
-            "Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaE90-1/07.40.1.2; Profile/MIDP-2.0 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413"
+            "Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaE90-1/07.40.1.2; Profile/MIDP-2.0 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413",
         };
 
         private String[] symbian8phones =
@@ -208,6 +253,38 @@ namespace eu.bitwalker.useragentutils
             "Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1.4"
         };
 
+        private String[] iPhone9 =
+        {
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_0_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13A452 [FBAN/FBIOS;FBAV/46.0.0.54.156;FBBV/18972819;FBDV/iPhone6,2;FBMD/iPhone;FBSN/iPhone OS;FBSV/9.0.2;FBSS/2; FBCR/Telekom.de;FBID/phone;FBLC/de_DE;"
+        };
+
+        private String[] iPhone9_1 =
+        {
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1",
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) FxiOS/1.4 Mobile/13B143 Safari/601.1.46",
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 [FBAN/FBIOS;FBAV/47.0.0.43.396;FBBV/20481971;FBDV/iPhone8,1;FBMD/iPhone;FBSN/iPhone OS;FBSV/9.1;FBSS/2; FBCR/o2-de;FBID/phone;FBLC/de_DE;FBOP/5]",
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 [FBAN/FBIOS;FBAV/47.0.0.43.396;FBBV/20481971;FBDV/iPhone6,2;FBMD/iPhone;FBSN/iPhone OS;FBSV/9.1;FBSS/2; FBCR/Telekom.de;FBID/phone;FBLC/ru_RU;FBOP"
+        };
+
+        private String[] iPhone9_2 =
+        {
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13D15 Safari/601.1",
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15 [FBAN/MessengerForiOS;FBAV/52.0.0.42.75;FBBV/18946437;FBDV/iPhone6,2;FBMD/iPhone;FBSN/iPhone OS;FBSV/9.2.1;FBSS/2; FBCR/Vodafone.de;FBID/phone;FB",
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15 [FBAN/FBIOS;FBAV/47.0.0.43.396;FBBV/20481971;FBDV/iPhone8,1;FBMD/iPhone;FBSN/iPhone OS;FBSV/9.2.1;FBSS/2; FBCR/Vodafone.de;FBID/phone;FBLC/de_DE;"
+        };
+
+        private String[] iPhone9_3 =
+        {
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13E198 Safari/601.1",
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) OPiOS/12.1.1.98980 Mobile/13E5191d Safari/9537.53"
+        };
+
+        private String[] iPhone10 =
+        {
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/14A456 Safari/602.1",
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 10_0 like Mac OS X) AppleWebKit/602.1.17 (KHTML, like Gecko) Version/9.0 Mobile/14A166 Safari/601.1",
+        };
+
         private String[] iPods =
         {
             "Mozilla/5.0 (iPod; U; CPU like Mac OS X; nl-nl) AppleWebKit/420.1 (KHTML, like Gecko)",
@@ -222,6 +299,37 @@ namespace eu.bitwalker.useragentutils
             "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10",
             "Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; ja-jp) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5",
             "Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3"
+        };
+
+        private string[] iPadIos9 =
+        {
+            "Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/48.0.2564.87 Mobile/13A344 Safari/601.1.46",
+            "Mozilla/5.0 (iPad; CPU OS 9_0_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13A452 [FBAN/MessengerForiOS;FBAV/53.0.0.10.320;FBBV/20008796;FBDV/iPad4,1;FBMD/iPad;FBSN/iPhone OS;FBSV/9.0.2;FBSS/2; FBCR/;FBID/tablet;FBLC/de_DE;FBOP/1]"
+        };
+
+        private String[] iPadIos9_1 =
+        {
+            "Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 MXiOS/4.8.4.57",
+            "Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 [FBAN/FBIOS;FBAV/38.0.0.6.79;FBBV/14316658;FBDV/iPad2,2;FBMD/iPad;FBSN/iPhone OS;FBSV/9.1;FBSS/1; FBCR/o2-de;FBID/tablet;FBLC/de_DE;FBOP/1]"
+        };
+
+        private String[] iPadIos9_2 =
+        {
+            "Mozilla/5.0 (iPad; CPU OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15 [FBAN/FBIOS;FBAV/46.0.0.54.156;FBBV/18972819;FBDV/iPad4,1;FBMD/iPad;FBSN/iPhone OS;FBSV/9.2.1;FBSS/2; FBCR/;FBID/tablet;FBLC/de_DE;FBOP/1]",
+            "Mozilla/5.0 (iPad; CPU OS 9_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) CriOS/40.0.2214.61 Mobile/13C75 Safari/600.1.4",
+            "Mozilla/5.0 (iPad; CPU OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15 Safari/9537.53 Kitt/1.3.3/11"
+        };
+
+        private String[] iPadIos9_3 =
+        {
+            "Mozilla/5.0 (iPad; CPU OS 9_3 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/48.0.2564.87 Mobile/13E5191d Safari/601.1.46",
+            "Mozilla/5.0 (iPad; CPU OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Coast/5.01.98770 Mobile/13E5181f Safari/7534.48.3",
+            "Mozilla/5.0 (iPad; CPU OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13E5181f"
+        };
+
+        private String[] iPadIos10 =
+        {
+            "Mozilla/5.0 (iPad; CPU OS 10_0 like Mac OS X) AppleWebKit/602.1.8 (KHTML, like Gecko) Version/9.0 Mobile/14A112 Safari/601.1"
         };
 
         private String[] iPadIos6 =
@@ -325,6 +433,20 @@ namespace eu.bitwalker.useragentutils
         {
             "Mozilla/5.0 (Linux; Android 5.0; Nexus 9 Build/LRX21L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Safari/537.36"
             // Nexus 9
+        };
+
+        private String[] android6 =
+        {
+            "Mozilla/5.0 (Linux; Android 6.0.1; LG-D855 Build/MMB29T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.27 Mobile Safari/537.36",
+            "Mozilla/5.0 (Linux; U; Android 6.0.1; en-US; SM-T320 Build/MMB29T) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/10.8.0.718 U3/0.8.0 Mobile Safari/534.30",
+            "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/47.0.2526.100 Mobile Safari/537.36 V1_AND_SQ_4.6.1_9_YYB_D QQ/5.3.1.615 NetType/WIFI"
+        };
+
+        private String[] android6_tablet =
+        {
+            "Mozilla/5.0 (Linux; Android 6.0; SHIELD Tablet K1 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 YaBrowser/15.12.2.6772.01 Yowser/2.5.2 Safari/537.36",
+            "Mozilla/5.0 (Linux; Android 6.0; SHIELD Tablet K1 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.95 Safari/537.36",
+            "Mozilla/5.0 (Android 6.0.1; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0"
         };
 
         private String[] androidMobile =
@@ -461,7 +583,7 @@ namespace eu.bitwalker.useragentutils
         /*
           NTENT
         */
-        private string[] ntent_ios9 =
+        private string[] ntent_ios9_1 =
         {
             "Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 NTENTBrowser/1.0.0.1 (KZ)"
         };
@@ -507,11 +629,21 @@ namespace eu.bitwalker.useragentutils
             testAgents(windows7, OperatingSystem.WINDOWS_7);
             testAgents(windows8, OperatingSystem.WINDOWS_8);
             testAgents(windows81, OperatingSystem.WINDOWS_81);
+            testAgents(windows10, OperatingSystem.WINDOWS_10);
             testAgents(windowsXP, OperatingSystem.WINDOWS_XP);
             testAgents(windows98, OperatingSystem.WINDOWS_98);
             testAgents(palmOsDevices, OperatingSystem.PALM);
             testAgents(bada, OperatingSystem.BADA);
-            testAgents(webOS, OperatingSystem.WEBOS);
+            testAgents(webOS_1, OperatingSystem.WEBOS1);
+            testAgents(webOS_1_1, OperatingSystem.WEBOS1_1);
+            testAgents(webOS_1_2, OperatingSystem.WEBOS1_2);
+            testAgents(webOS_1_3, OperatingSystem.WEBOS1_3);
+            testAgents(webOS_1_4, OperatingSystem.WEBOS1_4);
+            testAgents(webOS_2, OperatingSystem.WEBOS2);
+            testAgents(webOS_2_1, OperatingSystem.WEBOS2_1);
+            testAgents(webOS_2_2, OperatingSystem.WEBOS2_2);
+            testAgents(webOS_2_3, OperatingSystem.WEBOS2_3);
+            testAgents(webOS_3, OperatingSystem.WEBOS3);
             testAgents(symbian9phones, OperatingSystem.SYMBIAN9);
             testAgents(symbian8phones, OperatingSystem.SYMBIAN8);
             testAgents(symbian7phones, OperatingSystem.SYMBIAN7);
@@ -525,7 +657,17 @@ namespace eu.bitwalker.useragentutils
             testAgents(iPhone8, OperatingSystem.iOS8_IPHONE);
             testAgents(iPhone8_1, OperatingSystem.iOS8_1_IPHONE);
             testAgents(iPhone8_3, OperatingSystem.iOS8_3_IPHONE);
+            testAgents(iPhone9, OperatingSystem.iOS9_IPHONE);
+            testAgents(iPhone9_1, OperatingSystem.iOS9_1_IPHONE);
+            testAgents(iPhone9_2, OperatingSystem.iOS9_2_IPHONE);
+            testAgents(iPhone9_3, OperatingSystem.iOS9_3_IPHONE);
+            testAgents(iPhone10, OperatingSystem.iOS10_IPHONE);
             testAgents(iPadIos8_4, OperatingSystem.iOS8_4_IPAD);
+            testAgents(iPadIos9, OperatingSystem.iOS9_IPAD);
+            testAgents(iPadIos9_1, OperatingSystem.iOS9_1_IPAD);
+            testAgents(iPadIos9_2, OperatingSystem.iOS9_2_IPAD);
+            testAgents(iPadIos9_3, OperatingSystem.iOS9_3_IPAD);
+            testAgents(iPadIos10, OperatingSystem.iOS10_IPAD);
             testAgents(iPods, OperatingSystem.MAC_OS_X_IPOD);
             testAgents(iPadIos6, OperatingSystem.iOS6_IPAD);
             testAgents(iPadIos7, OperatingSystem.iOS7_IPAD);
@@ -533,6 +675,7 @@ namespace eu.bitwalker.useragentutils
             testAgents(iPad, OperatingSystem.MAC_OS_X_IPAD);
             testAgents(blackberries, OperatingSystem.BLACKBERRY);
             testAgents(blackberry6, OperatingSystem.BLACKBERRY6);
+            testAgents(blackberry7, OperatingSystem.BLACKBERRY7);
             testAgents(android1g, OperatingSystem.ANDROID1);
             testAgents(android2g, OperatingSystem.ANDROID2);
             testAgents(android4g, OperatingSystem.ANDROID4);
@@ -542,12 +685,15 @@ namespace eu.bitwalker.useragentutils
             testAgents(android4_tablet, OperatingSystem.ANDROID4_TABLET);
             testAgents(android4_wearable, OperatingSystem.ANDROID4_WEARABLE);
             testAgents(android5_tablet, OperatingSystem.ANDROID5_TABLET);
+            testAgents(android6, OperatingSystem.ANDROID6);
+            testAgents(android6_tablet, OperatingSystem.ANDROID6_TABLET);
             testAgents(androidMobile, OperatingSystem.ANDROID_MOBILE);
             testAgents(androidTablet, OperatingSystem.ANDROID_TABLET);
             testAgents(chromeOS, OperatingSystem.CHROME_OS);
             testAgents(maemo, OperatingSystem.MAEMO);
             testAgents(kindle2, OperatingSystem.KINDLE2);
             testAgents(kindle3, OperatingSystem.KINDLE3);
+            //testAgents(kindle_fire, OperatingSystem.KINDLE);
             testAgents(roku, OperatingSystem.ROKU);
             testAgents(googleTV, OperatingSystem.GOOGLE_TV);
             testAgents(proxy, OperatingSystem.PROXY);
@@ -561,7 +707,7 @@ namespace eu.bitwalker.useragentutils
             */
             testAgents(ntent_android5, OperatingSystem.ANDROID5);
             testAgents(ntent_android4, OperatingSystem.ANDROID4);
-            testAgents(ntent_ios9, OperatingSystem.iOS9_IPHONE);
+            testAgents(ntent_ios9_1, OperatingSystem.iOS9_1_IPHONE);
             testAgents(ntent_ios8_3, OperatingSystem.iOS8_3_IPHONE);
         }
 

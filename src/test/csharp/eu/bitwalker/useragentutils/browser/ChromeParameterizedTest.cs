@@ -55,6 +55,18 @@ public class ChromeParameterizedTest : AbstractUserAgentParameterizedTest {
 				[TestCase(
 							"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36",
 						"CHROME43", "43.0.2357.124", "MAC_OS_X" )]
+                [TestCase(
+                        "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36",
+						"CHROME49", "49.0.2623.87", "WINDOWS_7" )]
+				[TestCase(
+                        "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36",
+						"CHROME50", "50.0.2661.75", "WINDOWS_7" )]
+				[TestCase(
+                        "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36",
+						"CHROME53", "53.0.2785.143", "WINDOWS_7" )]
+				[TestCase(
+                        "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2785.143 Safari/537.36",
+						"CHROME54", "54.0.2785.143", "WINDOWS_7" )]
     [Test]
     public void testData(String userAgentValue,
             string expectedBrowserStr, String expectedBrowserVersion,

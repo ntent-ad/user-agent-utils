@@ -12,7 +12,7 @@ public class KonquerorParameterizedTest :
 						"KONQUEROR", "3.3", "LINUX" )]
 				[TestCase(
 						"Mozilla/6.0 (compatible; Konqueror/4.2; i686 FreeBSD 6.4; 20060308)",
-						"KONQUEROR", "4.2", "UNKNOWN" )]
+						"KONQUEROR", "4.2", "FREE_BSD")]
 				[TestCase(
 						"Mozilla/5.0 (compatible; Konqueror/3.1; Linux 2.4.21-20.0.1.ELsmp; X11; i686; , en_US, en, de)",
 						"KONQUEROR", "3.1", "LINUX" )]
