@@ -1150,7 +1150,11 @@ namespace eu.bitwalker.useragentutils
         private string[] ntent =
         {
             "Mozilla/5.0 (iOS 9.0.1; iPhone 5s Build/ME305LL/A ) AppleWebKit/600.1.4 (KHTML, like Gecko) NTENTBrowser/1.0.0.1 (KZ)",
-            "Mozilla/5.0 (Android 5.1.1; Nexus 6 Build/LMY48M) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/1.2.3(KZ) Safari/537.36"
+            "Mozilla/5.0 (Android 5.1.1; Nexus 6 Build/LMY48M) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/1.2.3(KZ) Safari/537.36",
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) NTENTBrowser/1.0.1 Kcell-KZ",
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) NTENTBrowser/1.0.1 (Kcell-KZ)",
+            "Mozilla/5.0 (Android 5.0.1; SCH-I545 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/9.9.9.999 (Kcell-KZ) Mobile Safari/537.36",
+            "Mozilla/5.0 (Android 5.0.1; SCH-I545 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36 NTENTBrowser/9.9.9.999 (Kcell-KZ) Mobile Safari/537.36",
         };
 
         /**
@@ -1223,8 +1227,13 @@ namespace eu.bitwalker.useragentutils
             testVersions("Mozilla/5.0 (Android 5.1.1; Nexus 6 Build/LMY48M) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/1.2.3 (KZ) Mobile Safari/537.36", new Version("1.2.3", "1", "2"));
             testVersions("Mozilla/5.0 (Android 5.0.2; MotoE2(4G-LTE) Build/LXI22.50-24.1) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/1.0.0.250 (KZ) Mobile Safari/537.36", new Version("1.0.0.250", "1", "0"));
             testVersions("Mozilla/5.0 (Android 4.2.2; GT-S7582 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/1.0.0.200 (KZ) Mobile Safari/537.36", new Version("1.0.0.200", "1", "0"));
-            
-            
+            testVersions("Mozilla/5.0 (iOS 9.0.1; iPhone 5s Build/ME305LL/A ) AppleWebKit/600.1.4 (KHTML, like Gecko) NTENTBrowser/1.0.0.1 (KZ)", new Version("1.0.0.1", "1", "0"));
+            testVersions("Mozilla/5.0 (Android 5.1.1; Nexus 6 Build/LMY48M) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/1.2.3(KZ) Safari/537.36", new Version("1.2.3", "1", "2"));
+            testVersions("Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) NTENTBrowser/1.3.3 Kcell-KZ", new Version("1.3.3", "1", "3"));
+            testVersions("Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) NTENTBrowser/1.3.4 (Kcell-KZ)", new Version("1.3.4", "1", "3"));
+            testVersions("Mozilla/5.0 (Android 5.0.1; SCH-I545 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/9.9.9.999 (Kcell-KZ) Mobile Safari/537.36", new Version("9.9.9.999", "9", "9"));
+            testVersions("Mozilla/5.0 (Android 5.0.1; SCH-I545 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36 NTENTBrowser/9.9.9.999 (Kcell-KZ) Mobile Safari/537.36", new Version("9.9.9.999", "9", "9"));
+
         }
 
         private void testVersions(String ua, Version expectedVersion)
