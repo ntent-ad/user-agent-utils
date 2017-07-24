@@ -163,6 +163,7 @@ namespace eu.bitwalker.useragentutils
             NTENT - before SAFARI and generic AppleWebKit  and generic AndroidWebKit
         */
         public static readonly Browser NTENT = new Browser(Manufacturer.NTENT, null, 1, "NTENT Browser", new[] { "NTENTBrowser" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, @"NTENTBrowser\/(([0-9]+)\.([\d]+)\.?([\d]+)?\.?([\d]+)?)");
+        public static readonly Browser YAANI = new Browser(Manufacturer.NTENT, null, 2, "Yaani Browser", new[] { "YaaniBrowser" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, @"YaaniBrowser\/(([0-9]+)\.([\d]+)\.?([\d]+)?\.?([\d]+)?)");
 
         /**
 	     * Google Chrome browser

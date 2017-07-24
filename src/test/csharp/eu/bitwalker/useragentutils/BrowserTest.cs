@@ -1149,12 +1149,23 @@ namespace eu.bitwalker.useragentutils
         */
         private string[] ntent =
         {
+            "Mozilla/5.0 X11 (Linux x86_64) AppleWebKit/537.36 KHTML, like Gecko Chrome/54.0.2840.9 NTENTBrowser/3.2.0.240 Safari/537.36",
             "Mozilla/5.0 (iOS 9.0.1; iPhone 5s Build/ME305LL/A ) AppleWebKit/600.1.4 (KHTML, like Gecko) NTENTBrowser/1.0.0.1 (KZ)",
             "Mozilla/5.0 (Android 5.1.1; Nexus 6 Build/LMY48M) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/1.2.3(KZ) Safari/537.36",
             "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) NTENTBrowser/1.0.1 Kcell-KZ",
             "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) NTENTBrowser/1.0.1 (Kcell-KZ)",
             "Mozilla/5.0 (Android 5.0.1; SCH-I545 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/9.9.9.999 (Kcell-KZ) Mobile Safari/537.36",
             "Mozilla/5.0 (Android 5.0.1; SCH-I545 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36 NTENTBrowser/9.9.9.999 (Kcell-KZ) Mobile Safari/537.36",
+        };
+        private string[] yaani =
+        {
+            "Mozilla/5.0 X11 (Linux x86_64) AppleWebKit/537.36 KHTML, like Gecko Chrome/54.0.2840.9 YaaniBrowser/3.2.0.240 Safari/537.36",
+            "Mozilla/5.0 (iOS 9.0.1; iPhone 5s Build/ME305LL/A ) AppleWebKit/600.1.4 (KHTML, like Gecko) YaaniBrowser/1.0.0.1 (KZ)",
+            "Mozilla/5.0 (Android 5.1.1; Nexus 6 Build/LMY48M) AppleWebKit/537.36 (KHTML, like Gecko) YaaniBrowser/1.2.3(KZ) Safari/537.36",
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) YaaniBrowser/1.0.1 Kcell-KZ",
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) YaaniBrowser/1.0.1 (Kcell-KZ)",
+            "Mozilla/5.0 (Android 5.0.1; SCH-I545 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) YaaniBrowser/9.9.9.999 (Kcell-KZ) Mobile Safari/537.36",
+            "Mozilla/5.0 (Android 5.0.1; SCH-I545 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36 YaaniBrowser/9.9.9.999 (Kcell-KZ) Mobile Safari/537.36",
         };
 
         /**
@@ -1233,6 +1244,7 @@ namespace eu.bitwalker.useragentutils
             testVersions("Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) NTENTBrowser/1.3.4 (Kcell-KZ)", new Version("1.3.4", "1", "3"));
             testVersions("Mozilla/5.0 (Android 5.0.1; SCH-I545 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) NTENTBrowser/9.9.9.999 (Kcell-KZ) Mobile Safari/537.36", new Version("9.9.9.999", "9", "9"));
             testVersions("Mozilla/5.0 (Android 5.0.1; SCH-I545 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36 NTENTBrowser/9.9.9.999 (Kcell-KZ) Mobile Safari/537.36", new Version("9.9.9.999", "9", "9"));
+            testVersions("Mozilla/5.0 X11 (Linux x86_64) AppleWebKit/537.36 KHTML, like Gecko Chrome/54.0.2840.9 YaaniBrowser/3.2.0.240 Safari/537.36", new Version("3.2.0.240", "3", "2"));
 
         }
 
@@ -1362,6 +1374,7 @@ namespace eu.bitwalker.useragentutils
               NTENT
             */
             testAgents(ntent, Browser.NTENT);
+            testAgents(yaani, Browser.YAANI);
         }
 
         [Test]
