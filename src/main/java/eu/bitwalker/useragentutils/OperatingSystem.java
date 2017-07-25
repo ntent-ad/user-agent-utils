@@ -58,8 +58,8 @@ public enum OperatingSystem {
 	WINDOWS_7(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 21, "Windows 7", new String[] { "Windows NT 6.1" }, new String[] { "Xbox", "Xbox One" }, DeviceType.COMPUTER, null), // before Win, yes, Windows 7 is called 6.1 LOL
 	WINDOWS_VISTA(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 20, "Windows Vista", new String[] { "Windows NT 6" }, new String[] { "Xbox", "Xbox One" }, DeviceType.COMPUTER, null), // before Win
 	WINDOWS_2000(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 15, "Windows 2000", new String[] { "Windows NT 5.0" }, null, DeviceType.COMPUTER, null), // before Win
-	WINDOWS_XP(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 10, "Windows XP", new String[] { "Windows NT 5" }, new String[] { "ggpht.com" }, DeviceType.COMPUTER, null), // before Win, 5.1 and 5.2 are basically XP systems
-	WINDOWS_10_MOBILE(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 54, "Windows 10 Mobile", new String[] { "Windows Phone 10" }, null, DeviceType.MOBILE, null),
+	WINDOWS_XP(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 10, "Windows XP", new String[] { "Windows NT 5" }, new String[] { "ggpht.com", "Xbox", "Xbox One" }, DeviceType.COMPUTER, null), // before Win, 5.1 and 5.2 are basically XP systems
+	WINDOWS_10_MOBILE(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 54, "Windows 10 Mobile", new String[] { "Windows Phone 10" }, new String[] { "Xbox", "Xbox One" }, DeviceType.MOBILE, null),
 	WINDOWS_PHONE8_1(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 53, "Windows Phone 8.1", new String[] { "Windows Phone 8.1" }, null, DeviceType.MOBILE, null), // before Win
 	WINDOWS_PHONE8(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 52, "Windows Phone 8", new String[] { "Windows Phone 8" }, null, DeviceType.MOBILE, null), // before Win
 	WINDOWS_MOBILE7(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 51, "Windows Phone 7", new String[] { "Windows Phone OS 7" }, null, DeviceType.MOBILE, null), // should be Windows Phone 7 but to keep it compatible we'll leave the name as is.

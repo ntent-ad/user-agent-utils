@@ -74,7 +74,13 @@ public class OthersParameterizedTest extends AbstractUserAgentParameterizedTest 
 						Browser.VIVALDI, "1.0.111.2", OperatingSystem.WINDOWS_7 },
 				{
 						"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586",
-						Browser.EDGE13, "13.10586", OperatingSystem.WINDOWS_10 }
+						Browser.EDGE13, "13.10586", OperatingSystem.WINDOWS_10 },
+				{
+						"Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36 Edge/14.14332",
+						Browser.EDGE14, "14.14332", OperatingSystem.WINDOWS_10 },
+				{
+						"Mozilla/5.0 (Windows NT 10.0; ARM; RM-1141) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.14977",
+						Browser.EDGE15, "15.14977", OperatingSystem.WINDOWS_10 }
 
 		});
 	}
