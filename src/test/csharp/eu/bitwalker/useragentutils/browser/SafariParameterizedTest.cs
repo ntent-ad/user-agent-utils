@@ -4,7 +4,11 @@ using NUnit.Framework;
 namespace  eu.bitwalker.useragentutils.browser {
 
 
-public class SafariParameterizedTest : AbstractUserAgentParameterizedTest { 
+public class SafariParameterizedTest : AbstractUserAgentParameterizedTest
+{
+                [TestCase(
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/601.1.56 (KHTML, like Gecko) Version/9.0 Safari/601.1.56",
+                    "SAFARI9", "9.0", "MAC_OS_X")]
 				// safari
 				[TestCase(
 						"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/525.28.3 (KHTML, like Gecko) Version/3.2.3 Safari/525.28.3",
@@ -42,6 +46,9 @@ public class SafariParameterizedTest : AbstractUserAgentParameterizedTest {
                 [TestCase(
                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/601.1.56 (KHTML, like Gecko) Version/9.0 Safari/601.1.56",
                         "SAFARI9", "9.0", "MAC_OS_X")]
+                [TestCase(
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.3 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.3",
+                    "SAFARI10", "10.0.3", "MAC_OS_X")]
 
                 // mobileSafari
                 [TestCase(
@@ -68,6 +75,9 @@ public class SafariParameterizedTest : AbstractUserAgentParameterizedTest {
                 [TestCase(
                         "Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13A4325c Safari/601.1",
 						"MOBILE_SAFARI9", "9.0", "iOS9_IPAD" )]
+                [TestCase(
+                    "Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.3 (KHTML, like Gecko) Version/10.0 Mobile/14D15 Safari/602.1",
+                    "MOBILE_SAFARI10", "10.0", "iOS10_IPHONE")]
 
     [Test]
     public void testData(String userAgentValue,

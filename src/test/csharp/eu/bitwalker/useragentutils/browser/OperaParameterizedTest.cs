@@ -65,6 +65,9 @@ public class OperaParameterizedTest : AbstractUserAgentParameterizedTest {
                 [TestCase(
                         "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 OPR/41.0.2308.81",
 						"OPERA41", "41.0.2308.81", "WINDOWS_10" )]
+				[TestCase(
+                        "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 OPR/42.0.2393.94",
+                        "OPERA42", "42.0.2393.94", "WINDOWS_10")]
 
     [Test]
     public void testData(String userAgentValue,
